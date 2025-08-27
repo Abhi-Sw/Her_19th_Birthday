@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Birthday Landing - Demo</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: radial-gradient(1200px 800px at 50% 50%, #1f1135, #000); color: white; }
+    .neon-text{ text-shadow:0 0 6px #ff00ff,0 0 14px #ff00ff,0 0 28px #ff00ff;}
+    .glass-card{ background: rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); backdrop-filter: blur(14px); }
+    .neon-border{ box-shadow: 0 0 12px #00faff, 0 0 24px #00faff, inset 0 0 12px #00faff; }
+    .btn-grad{ background: linear-gradient(90deg,#ec4899,#8b5cf6,#3b82f6); }
+  </style>
+</head>
+<body>
+  <div id="root" class="min-h-screen flex items-center justify-center"></div>
+  <script type="text/javascript">
+    const { motion } = window["framer-motion"];
+    function Demo(){
+      const [show, setShow] = React.useState(false);
+      return React.createElement('div', {className:'text-center max-w-2xl p-8 rounded-3xl glass-card neon-border'},
+        [
+          React.createElement(motion.h1, {className:'text-6xl font-extrabold neon-text mb-4', initial:{y:-50,opacity:0}, animate:{y:0,opacity:1}}, '🎉 Happy Birthday!'),
+          React.createElement('p', {className:'text-lg text-gray-300 mb-6'}, 'Wishing you a magical day filled with love, laughter & endless joy 💖'),
+          React.createElement('button', {className:'btn-grad px-8 py-4 rounded-2xl font-bold', onClick:()=>setShow(true)}, 'Open Your Surprise 🎁'),
+          show && React.createElement('div', {className:'mt-8 glass-card p-6 rounded-2xl neon-border'},
+            React.createElement('p', null, 'You are the spark that makes my world brighter. Today is all about celebrating YOU 💕')
+          )
+        ]
+      )
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(Demo));
+  </script>
+</body>
+</html>

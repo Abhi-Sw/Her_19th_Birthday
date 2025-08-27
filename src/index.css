@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Neon & glassmorphism helpers */
+.neon-text {
+  text-shadow: 0 0 6px #ff00ff, 0 0 14px #ff00ff, 0 0 28px #ff00ff;
+}
+.neon-border {
+  box-shadow: 0 0 12px #00faff, 0 0 24px #00faff, inset 0 0 12px #00faff;
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
