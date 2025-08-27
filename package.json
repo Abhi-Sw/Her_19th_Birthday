@@ -4,11 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
-    "preview": "vite preview",
-    "buildCommand": "npm run build",
-    "outputDirectory": "dist",
-    "framework": "vite"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
