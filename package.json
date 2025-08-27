@@ -7,10 +7,11 @@
     "build": "npx vite build",
     "preview": "vite preview",
     "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": "vite"
+    "outputDirectory": "dist",
+    "framework": "vite"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.441.0",
     "react": "^18.3.1",
